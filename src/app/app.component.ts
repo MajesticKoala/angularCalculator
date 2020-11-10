@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculator';
+
+  equation = " ";
+
+  addNumber(number: string) {
+    this.equation = this.equation.toString()+number;
+  }
+
+  clear() {
+    this.equation = " ";
+  }
+
+  calculate() {
+    this.equation = eval(this.equation);
+  }
 }
